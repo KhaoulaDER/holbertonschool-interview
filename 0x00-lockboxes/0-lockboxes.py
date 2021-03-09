@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+""" new funcyion"""
 
 def canUnlockAll(boxes):
+  "calcule"
   n=len(boxes)
   L1=[i for i in range(n)]
   for i in range(len(boxes)):
