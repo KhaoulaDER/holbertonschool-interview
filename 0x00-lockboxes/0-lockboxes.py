@@ -2,20 +2,19 @@
 """ new function"""
 
 def canUnlockAll(boxes):
-  i = 0
-  total = list(set(boxes[0])| {0})
-  add = True
-  while add:
-    add = False
-    for j in join(boxes,total[i:]):
-      if j not in total:
-        total.append(j)
-        i +=1
-        add= True 
-  return len(total)==len(boxes)
-
-def join(T,R):
-  res =[]
-  for e in R:
-    res += T[e]
-  return res
+  """calcule"""
+  n=len(boxes)
+  L1=[i for i in range(n)]
+  for i in range(len(boxes)):
+    if (i in boxes[i]):
+      boxes[i].remove(i)
+  for box in boxes:
+    for box1 in box:
+      if ( box1 in L1):
+        L1.remove(box1)
+      else:
+        break
+  if (L1==[] or L1==[0]):
+    return True
+  else:
+    return False
