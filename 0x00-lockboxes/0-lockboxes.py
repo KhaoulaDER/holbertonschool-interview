@@ -1,22 +1,19 @@
 #!/usr/bin/python3
 """ new function"""
-
 def canUnlockAll(boxes):
   """calcule"""
-  n=len(boxes)
-  L1=[i for i in range(n)]
-  for i in range(len(boxes)):
-    s=set(boxes[i])
-    if (i in s):
-      s.remove(i)
-      boxes[i]=list(s)
-  for box in boxes:
-    for box1 in box:
-      if ( box1 in L1):
-        L1.remove(box1)
-      else:
-        break
-  if (L1==[] or L1==[0]):
-    return True
+  l = len(boxes) - 1
+  List = []
+  for k in boxes[0]:
+      if k not in List and k <= l:
+          List.append(k)
+  for j in range(l + 1):
+      if j in List:
+          for i in boxes[j]:
+              if i not in List and i <= l:
+                  List.append(i)
+  if (len(List) == l) or\
+          (l == 0 and len(List) == 1):
+      return True
   else:
-    return False
+      return False
