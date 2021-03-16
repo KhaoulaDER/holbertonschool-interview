@@ -12,7 +12,8 @@ def canUnlockAll(boxes):
           for i in boxes[j]:
               if i not in List and i <= l:
                   List.append(i)
-  if (len(List) == l) or (l == 0 and len(List) == 1)):
+  if (len(List) == l) or/
+  (l == 0 and len(List) == 1):
       return True
   else:
       return False
