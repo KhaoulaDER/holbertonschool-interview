@@ -3,19 +3,18 @@
 
 def canUnlockAll(boxes):
   """calcule"""
-
-    length = len(boxes) - 1
-    unlocked_boxes = []
-    for f_keys in boxes[0]:
-        if f_keys not in unlocked_boxes and f_keys <= length:
-            unlocked_boxes.append(f_keys)
-    for x in range(length + 1):
-        if x in unlocked_boxes:
-            for y in boxes[x]:
-                if y not in unlocked_boxes and y <= length:
-                    unlocked_boxes.append(y)
-    if (len(unlocked_boxes) == length) or\
-            (length == 0 and len(unlocked_boxes) == 1):
-        return True
-    else:
-        return False
+  n=len(boxes)
+  L1=[i for i in range(n)]
+  for i in range(len(boxes)):
+    if (i in boxes[i]):
+      boxes[i].remove(i)
+  for box in boxes:
+    for box1 in box:
+      if ( box1 in L1):
+        L1.remove(box1)
+      else:
+        break
+  if (L1==[] or L1==[0]):
+    return True
+  else:
+    return False
