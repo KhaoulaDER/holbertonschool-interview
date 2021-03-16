@@ -6,8 +6,10 @@ def canUnlockAll(boxes):
   n=len(boxes)
   L1=[i for i in range(n)]
   for i in range(len(boxes)):
-    if (i in boxes[i]):
-      boxes[i].remove(i)
+    s=set(boxes[i])
+    if (i in s):
+      s.remove(i)
+      boxes[i]=list(s)
   for box in boxes:
     for box1 in box:
       if ( box1 in L1):
