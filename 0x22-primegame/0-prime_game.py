@@ -1,3 +1,4 @@
+#def isPrime
 def isPrime(n):
     if (n<=1):
         return False
@@ -7,7 +8,8 @@ def isPrime(n):
         for x in range(2,int(n//2)+1):
             if(n % x==0):
                 return False
-        return True        
+        return True     
+#def multiples
 def multiples(x,n):
   listMultiples = [x,]
   i=2
