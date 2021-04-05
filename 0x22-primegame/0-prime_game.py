@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-#def isPrime
+"def isPrime"
+
+
 def isPrime(n):
+    ""
     if (n<=1):
         return False
     elif (n==2):
@@ -9,18 +12,22 @@ def isPrime(n):
         for x in range(2,int(n//2)+1):
             if(n % x==0):
                 return False
-        return True     
+        return True 
+
+
 #def multiples
 def multiples(x,n):
-  listMultiples = [x,]
-  i=2
-  while(listMultiples[-1]< (n-x)+1):
-    listMultiples.append(x*i)
-    i=i+1
-  return listMultiples
+      ""
+      listMultiples = [x,]
+      i=2
+      while(listMultiples[-1]< (n-x)+1):
+        listMultiples.append(x*i)
+        i=i+1
+      return listMultiples
 
 # ccccc
 def playARound(t):
+  ""  
   listofPrimeInt=[]
   for x in t :
     if (isPrime(x)):
@@ -37,8 +44,10 @@ def playARound(t):
       player=player+1
     # if 1 maria wins else Ben wins
   return player%2
+
 # ccccc
 def isWinner(x,nums):
+  ""  
   listofnums = []
   for n in nums:
     listofnums.append([i for i in range(1,n+1)])
@@ -51,5 +60,3 @@ def isWinner(x,nums):
       return "Winner: Maria"
     else:
       return "Winner: Ben"
-
-    
