@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"def isPrime"
+""" Module for Prime Game """
 
 
 def isPrime(n):
-    ""
+    """Solves Prime Game"""
     if (n<=1):
         return False
     elif (n==2):
