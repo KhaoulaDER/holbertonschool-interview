@@ -19,6 +19,7 @@ def multiples(x,n):
     i=i+1
   return listMultiples
 
+# ccccc
 def playARound(t):
   listofPrimeInt=[]
   for x in t :
@@ -36,6 +37,7 @@ def playARound(t):
       player=player+1
     # if 1 maria wins else Ben wins
   return player%2
+# ccccc
 def isWinner(x,nums):
   listofnums = []
   for n in nums:
