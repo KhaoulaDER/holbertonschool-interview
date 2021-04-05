@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #def isPrime
 def isPrime(n):
     if (n<=1):
